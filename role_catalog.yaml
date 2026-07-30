@@ -92,7 +92,7 @@ roles:
     family: technology_data_digital
     label: AI Engineer
     queries: [AI Engineer]
-    title_pattern: "\\bai engineer\\b|\\bartificial intelligence engineer\\b"
+    title_pattern: "\\bai engineer\\b|\\bartificial intelligence engineer\\b|\\bai (?:platform|product|solutions|infrastructure) engineer\\b|\\bgen ?ai engineer\\b"
     strong: [artificial intelligence, ai engineering, generative ai, llm]
     weak: [python, machine learning, retrieval, evaluation]
     cv_role: ai-ml-engineer
@@ -132,6 +132,36 @@ roles:
     strong: [full stack development, full-stack development, web application development]
     weak: [frontend, backend, database, api]
     cv_role: full-stack-engineer
+    prompt: prompts/presets/software_engineering_general_cv.md
+  cloud_engineer:
+    family: technology_data_digital
+    label: Cloud Engineer
+    queries: [Junior Cloud Engineer, Graduate Cloud Engineer]
+    title_pattern: "\\bcloud (?:engineer|developer|specialist|consultant|architect)\\b|\\bcloud (?:infrastructure|security|identity) engineer\\b"
+    strong: [cloud engineering, infrastructure as code, aws, azure, terraform, cloudformation]
+    weak: [linux, networking, monitoring, python, security]
+    cv_role: cloud-platform-engineer
+    prompt: prompts/presets/software_engineering_general_cv.md
+  devops_engineer:
+    family: technology_data_digital
+    label: DevOps Engineer
+    queries: [Junior DevOps Engineer, Graduate DevOps Engineer]
+    title_pattern: "\\bdev[- ]?ops (?:engineer|specialist)\\b|\\bci ?/? ?cd engineer\\b|\\brelease engineer\\b|\\bbuild engineer\\b"
+    strong: [devops, ci/cd, continuous integration, continuous delivery, pipeline automation, release engineering]
+    weak: [docker, kubernetes, git, scripting, automation]
+    cv_role: cloud-platform-engineer
+    prompt: prompts/presets/software_engineering_general_cv.md
+  platform_engineer:
+    family: technology_data_digital
+    label: Platform Engineer
+    queries: [Junior Platform Engineer, Site Reliability Engineer, Infrastructure Engineer]
+    # Negative lookbehinds keep AI/ML/data-prefixed platform titles with their own
+    # roles; without them "AI Platform Engineer" matches here, and when this role is
+    # not selected the title is scored "deselected" and dropped.
+    title_pattern: "(?<!ai )(?<!ml )(?<!data )\\bplatform engineer\\b|\\bsite reliability engineer\\b|\\bSRE\\b|\\binfrastructure engineer\\b|\\bsystems? engineer\\b"
+    strong: [platform engineering, site reliability, kubernetes, observability, infrastructure, containerisation]
+    weak: [docker, linux, terraform, automation, monitoring]
+    cv_role: cloud-platform-engineer
     prompt: prompts/presets/software_engineering_general_cv.md
   statistician:
     family: technology_data_digital

@@ -1,24 +1,26 @@
 label: Software Engineering
 marketplace_discovery:
-  queries: [Junior Software Engineer, Junior Backend Developer, Junior Frontend Developer, Graduate Software Engineer]
-title_keywords: [software engineer, software developer, backend, frontend, full stack, full-stack, application developer]
+  queries: [Junior Software Engineer, Junior Backend Developer, Junior Frontend Developer, Graduate Software Engineer, Junior DevOps Engineer, Junior Cloud Engineer, Junior Platform Engineer]
+title_keywords: [software engineer, software developer, backend, frontend, full stack, full-stack, application developer, cloud engineer, devops, platform engineer, infrastructure engineer, site reliability]
 relevance_keywords:
-  strong: [software engineering, software development, backend, frontend, full stack, full-stack, application development, web development]
-  weak: [programming, coding, testing, debugging, api, database, deployment, git]
+  strong: [software engineering, software development, backend, frontend, full stack, full-stack, application development, web development, cloud engineering, devops, ci/cd, platform engineering, infrastructure as code, site reliability]
+  weak: [programming, coding, testing, debugging, api, database, deployment, git, docker, kubernetes, terraform, aws, azure, linux]
 role_fit:
-  clear_title: "\\b(?:software|backend|front[- ]?end|full[- ]?stack|application|web)\\s+(?:engineer|developer)\\b"
-  excluded_title: "\\b(?:data scientist|data analyst|machine learning|product manager|project manager|sales|recruit(?:er|ment)|marketing|network engineer|hardware engineer|civil engineer|mechanical engineer)\\b"
-seniority_role_pattern: "(?:software|backend|front[- ]?end|full[- ]?stack|application|web)?\\s*(?:engineer|developer|programmer|architect|manager|lead)"
+  clear_title: "\\b(?:software|backend|front[- ]?end|full[- ]?stack|application|web|cloud|dev[- ]?ops|platform|infrastructure|site reliability|release|build)\\s+(?:engineer|developer|specialist|consultant)\\b|\\bdev[- ]?ops\\b|\\bSRE\\b"
+  excluded_title: "\\b(?:data scientist|data analyst|machine learning|product manager|project manager|sales|recruit(?:er|ment)|marketing|network engineer|hardware engineer|civil engineer|mechanical engineer|counsel|attorney|lawyer|jurist|social media|content creator|copywriter|acquisitie|inkoop|buyer|category (?:manager|specialist)|expert)\\b"
+seniority_role_pattern: "(?:software|backend|front[- ]?end|full[- ]?stack|application|web|cloud|dev[- ]?ops|platform|infrastructure)?\\s*(?:engineer|developer|programmer|architect|manager|lead|specialist|consultant)"
 keyword_patterns: {}
 cv_skill_categories:
   backend-engineer: [Programming, Backend engineering, Databases and APIs, Testing and delivery]
   frontend-engineer: [Programming, Frontend engineering, Web platform, Testing and delivery]
   full-stack-engineer: [Programming, Frontend and backend, Databases and APIs, Testing and delivery]
   software-engineer: [Programming, Software engineering, Testing, Delivery]
+  cloud-platform-engineer: [Cloud and infrastructure, Automation and IaC, CI/CD and delivery, Security and reliability]
 cv_role_patterns:
   backend-engineer: "\\bback[- ]?end\\b"
   frontend-engineer: "\\bfront[- ]?end\\b"
   full-stack-engineer: "\\bfull[- ]?stack\\b"
+  cloud-platform-engineer: "\\bcloud\\b|\\bdev[- ]?ops\\b|\\bplatform\\b|\\binfrastructure\\b|\\bsite reliability\\b|\\bSRE\\b"
 cv_default_role: software-engineer
 cv_references: {}
 cv_phrase_replacements: {}

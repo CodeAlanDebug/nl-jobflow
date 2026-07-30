@@ -20,8 +20,8 @@ profiles:
   software_engineering:
     label: Software Engineering
     degree_patterns: ["software engineering"]
-    summary_patterns: ["software engineer", "backend", "frontend", "full-stack"]
-    roles: [software_engineer, backend_engineer, frontend_engineer, full_stack_engineer]
+    summary_patterns: ["software engineer", "backend", "frontend", "full-stack", "cloud engineer", "devops", "platform engineer"]
+    roles: [software_engineer, backend_engineer, frontend_engineer, full_stack_engineer, cloud_engineer, devops_engineer, platform_engineer]
     policy: presets/software_engineering.yaml
   natural_sciences:
     label: Natural Sciences
